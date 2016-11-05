@@ -1,0 +1,96 @@
+//@Font Face
+@font-face {
+  font-family: 'Redlight-line';
+  src: url('../../assets/fonts/The Redlight Line Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../../assets/fonts/The Redlight Line Bold.otf') format('opentype'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Redlight-stylistic';
+  src: url('../../assets/fonts/The Redlight Stylistic.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../../assets/fonts/The Redlight Stylistic.otf') format('opentype'); /* Legacy iOS */
+}
+
+//Typo rules
+html
+{
+	font:normal 100%/#{1.5} $main-font;
+}
+
+//Titles
+
+h1, h2, h3, h4
+{
+	margin:0;
+}
+
+.site-title, .site-catch-phrase, .site-title--decorative{
+	line-height: 1em;
+}
+
+
+ .section-block__title, .step-block__number, .step-block__title{
+	font-size: rem(48);
+	font-weight: 400;
+}
+
+.section-block__title, .step-block__number, .step-block__title{
+		font-family: $secondary-font;
+}
+
+.site-catch-phrase, .section-block__subTitle{
+font-family: $ternary-font;
+font-weight: 300;
+}
+
+.site-title{
+	font-family: "Redlight-stylistic", sans-serif;
+	font-size: rem(48);
+	color: $main-color;
+	@include  mq(xs){
+		font-size: rem(72);
+	}
+	@include  mq(md){
+		font-size: rem(110);
+	}
+}
+
+.site-title--decorative{
+	font-family: "Redlight-line", sans-serif;
+	font-size: rem(64);
+	color: #d5b88a;
+	@include  mq(xs){
+		font-size: rem(90);
+	}
+	@include  mq(md){
+		font-size: rem(130);
+	}
+}
+
+.site-catch-phrase{
+	color:#b78846;
+}
+.section-block__title{
+	font-family: $secondary-font;
+}
+.section-block__subTitle{
+
+}
+
+
+.step-block__title{
+line-height: 1em;
+}
+
+.step-block__number{
+	line-height: 0.6em;
+	&:after{
+		font-size: 12px;
+		text-decoration: underline;
+		content: "step";
+		text-transform: capitalize;
+		font-family: $main-font;
+		display: block;
+		text-align: center;
+	}
+}

@@ -1,0 +1,66 @@
+/*==========================================================
+    Helpers
+==========================================================*/
+
+%inline-block {
+    display: inline-block;
+    vertical-align: top;
+}
+
+%clearfix {
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+%no-bullet {
+    list-style: none;
+    padding-left: 0;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+/************************
+    Size and space
+*************************/
+
+.wrap--big {
+    width: 95%;
+}
+
+%button-size {
+    padding: 1rem .5rem;
+}
+
+
+/************************
+    Styles
+*************************/
+
+.hide {
+    opacity: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    margin-left: -999em;
+    margin-left: -999rem;
+    position: absolute;
+}
+
+.visuallyhidden{
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px; margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; 
+}
+
+.centered {
+    text-align: center;
+}

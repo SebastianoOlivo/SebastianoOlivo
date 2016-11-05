@@ -1,0 +1,39 @@
+
+// breakpoints
+$bp-xs:  rem(568);
+$bp-sm:  rem(768);
+$bp-md:  rem(1024);
+$bp-lg:  rem(1280);
+$bp-xl:  rem(1600);
+
+/*************************
+    Typography
+*************************/
+
+$default-font-size: 16;
+
+
+// Easings
+
+$ease-in-out-primary: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+
+
+/*####################
+=color
+#####################*/
+$main-color:#FFF;
+$secondary-color:#13131B;
+$ternary-color:#00B4F1;
+
+
+/*####################
+=Typography
+#####################*/
+
+$base-font:16px;
+$main-font:"Open Sans", sans-serif;
+$secondary-font:'Fjalla One', sans-serif;
+$ternary-font:"Raleway", sans-serif;
+
+
+$tilted-angle: -12deg;

@@ -1,0 +1,23 @@
+$mq-list:
+  ( xs: $bp-xs,
+    sm: $bp-sm,
+    md: $bp-md,
+    lg: $bp-lg,
+    xl: $bp-xl
+		);
+
+@mixin mq($breakpoint) {
+  $breakpoint-name: unquote($breakpoint);
+
+  @if map-has-key($mq-list, $breakpoint-name) {
+    $query: map-get($mq-list, $breakpoint-name);
+    @media all and (min-width: #{$query}) {
+      @content;
+    }
+  }
+  @else {
+    @media all and($breakpoint){
+      @content;
+    }
+  }
+}

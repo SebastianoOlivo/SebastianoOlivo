@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="121px" height="160px" viewBox="0 0 121 160" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
+    <title>Book Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="25.78625 129.568706 54.76125 129.568706 54.76125 159.71 40.27375 147.988386 25.78625 159.71"></polygon>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="28.975" height="30.1412936" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <path d="M119.955,45.8296575 L119.955,129.58194 C119.955,138.822729 113.46332,146.31387 105.470127,146.31387 L11.29875,146.31387 L11.29875,143.802095" id="path-3"></path>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="108.65625" height="100.484212" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <rect id="path-5" x="11.29875" y="0.630950521" width="108.65625" height="117.216142" rx="2"></rect>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="108.65625" height="117.216142" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+        <rect id="path-7" x="35.9275" y="32.4467604" width="60.8475" height="28.4667773" rx="2"></rect>
+        <mask id="mask-8" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="60.8475" height="28.4667773" fill="white">
+            <use xlink:href="#path-7"></use>
+        </mask>
+    </defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-659.000000, -6429.000000)" stroke="#00B4F1">
+            <g id="Projects-Mag" transform="translate(-375.000000, 6429.000000)">
+                <g id="Book-Icon" transform="translate(1035.000000, 0.000000)">
+                    <use id="Rectangle-12" mask="url(#mask-2)" stroke-width="4" xlink:href="#path-1"></use>
+                    <use id="Rectangle-11" mask="url(#mask-4)" stroke-width="4" xlink:href="#path-3"></use>
+                    <use id="Rectangle-11" mask="url(#mask-6)" stroke-width="4" xlink:href="#path-5"></use>
+                    <path d="M13.471875,129.568706 L108.215355,129.568706 C110.298308,129.568706 113.290499,128.504744 114.846368,127.122434 C114.846368,127.122434 118.50625,124.545157 118.50625,122.033383" id="Line" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M12.3853125,144.639353 C6.58442415,144.639353 1.881875,138.266848 1.881875,130.405965 C1.881875,122.545081 6.58442415,116.172576 12.3853125,116.172576" id="Oval-6" stroke-width="2"></path>
+                    <use id="Rectangle-10" mask="url(#mask-8)" stroke-width="4" xlink:href="#path-7"></use>
+                    <path d="M1.88187498,129.568706 L0.52457457,17.3983857 C0.474068368,13.224441 3.01242872,7.66126249 6.26311322,5.04720759 C6.26311322,5.04720759 9.12562509,2.30546683 10.5743752,2.30546683 C12.0231253,2.30546683 15.6449999,2.30546683 15.6449999,2.30546683" id="Line" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
