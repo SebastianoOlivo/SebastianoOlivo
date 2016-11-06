@@ -34,4 +34,4 @@ exclude:
 
 # Custom config
 
-source: src
+include: assets
