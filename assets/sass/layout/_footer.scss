@@ -62,8 +62,8 @@ padding: 1rem;
     display: block;
     text-align: center;
     transition: all 150ms $ease-in-out-primary;
-    max-width: rem(30);
-    max-height: rem(30);
+    width: rem(30);
+    height: rem(30);
     &:hover{
       transform: scale(1.25);
     }
