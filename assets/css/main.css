@@ -68,41 +68,13 @@ svg {
     top: 0;
     transform-origin: right bottom; }
 
-.section-block--projects .section-block__decoration {
-  position: absolute;
-  top: -100px;
-  box-sizing: content-box;
-  width: 50%;
-  height: 0;
-  padding-left: 50%;
-  overflow: hidden;
-  background: transparent;
-  padding-top: 100px;
-  z-index: 4; }
-  .section-block--projects .section-block__decoration:before, .section-block--projects .section-block__decoration:after {
-    position: absolute;
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    width: 0;
-    height: 0;
-    border-top: 100px solid transparent;
-    border-bottom: 150px solid transparent; }
-  .section-block--projects .section-block__decoration:before {
-    left: 0;
-    border-left: 500px solid #FFF; }
-  .section-block--projects .section-block__decoration:after {
-    right: 0;
-    border-right: 500px solid #FFF; }
-
 .page {
   position: relative; }
 
 .section-block, .step-block {
   display: flex;
   flex-direction: column;
-  min-height: 75vh;
+  min-height: 50vh;
   background-size: cover !important;
   position: relative;
   text-align: center; }
@@ -150,9 +122,10 @@ svg {
   z-index: 3; }
 
 .section-block__icon {
-  margin: 0 auto;
-  max-height: 100px;
-  max-width: 100px; }
+  max-width: 75px;
+  max-height: 75px; }
+  .section-block__icon path {
+    fill: #DDAA62; }
 
 .section-block__btn {
   background: #DDAA62;
@@ -167,7 +140,7 @@ svg {
 /*Step block*/
 .step-holder {
   display: block;
-  min-height: 75vh; }
+  min-height: 50vh; }
 
 .step-holder--01 {
   position: relative; }
@@ -226,7 +199,7 @@ svg {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 2; }
+    z-index: 0; }
 
 .step-holder--01 .step-block {
   background: url("../../assets/images/website/step01.png") 50% 0 no-repeat; }
@@ -280,15 +253,12 @@ nav[role=navigation] {
     color: #DDAA62;
     text-transform: uppercase;
     font-family: "Raleway", sans-serif; }
-  .mainnav__item img {
-    display: block;
-    width: 100%;
-    margin: 0 auto;
-    max-height: 75px;
-    margin-bottom: 0.5rem;
-    transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1); }
-    .mainnav__item img:hover {
+  .mainnav__item svg {
+    transition: all 150ms cubic-bezier(0.77, 0, 0.175, 1); }
+    .mainnav__item svg:hover {
       transform: scale(1.25); }
+    .mainnav__item svg path {
+      fill: #DDAA62; }
 
 .nav-btn span, .nav-btn span:after, .nav-btn span:before {
   display: inline-block;
@@ -429,32 +399,19 @@ header[role=banner] {
   .social a {
     box-sizing: border-box;
     display: block;
-    background: #DDAA62;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 2.5rem;
     text-align: center;
-    transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1); }
-    .social a:before {
-      content: "";
-      display: inline-block;
-      vertical-align: middle;
-      height: 100%;
-      margin: -2px; }
+    transition: all 150ms cubic-bezier(0.77, 0, 0.175, 1);
+    max-width: 1.875rem; }
     .social a:hover {
       transform: scale(1.25); }
-    @media all and (min-width: 35.5rem) {
-      .social a {
-        width: 1.875rem;
-        height: 1.875rem;
-        border-radius: 1.875rem; } }
   .social svg {
     display: inline-block;
     fill: #FFF;
     height: 100%;
-    width: 50%;
     box-sizing: border-box;
     vertical-align: middle; }
+  .social ellipse {
+    fill: #DDAA62; }
   @media all and (min-width: 35.5rem) {
     .social {
       justify-content: flex-start; } }
@@ -492,6 +449,9 @@ body {
 
 ul {
   margin: 0; }
+
+button {
+  cursor: pointer; }
 
 @font-face {
   font-family: 'Redlight-line';
@@ -535,7 +495,8 @@ h1, h2, h3, h4 {
 .site-title--decorative {
   font-family: "Redlight-line", sans-serif;
   font-size: 4rem;
-  color: #d5b88a; }
+  color: #d5b88a;
+  opacity: 0.4; }
   @media all and (min-width: 35.5rem) {
     .site-title--decorative {
       font-size: 5.625rem; } }
@@ -544,7 +505,8 @@ h1, h2, h3, h4 {
       font-size: 8.125rem; } }
 
 .site-catch-phrase {
-  color: #b78846; }
+  position: relative;
+  color: #faf0db; }
 
 .section-block__title {
   font-family: "Fjalla One", sans-serif; }

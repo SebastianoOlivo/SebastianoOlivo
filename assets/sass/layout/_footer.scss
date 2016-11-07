@@ -60,35 +60,23 @@ padding: 1rem;
   a{
     box-sizing: border-box;
     display: block;
-    background: $ternary-color;
-    width: rem(40);
-    height: rem(40);
-    border-radius:rem(40);
     text-align: center;
-    transition: all 500ms $ease-in-out-primary;
-    &:before{
-      content: "";
-      display: inline-block;
-      vertical-align: middle;
-      height: 100%;
-      margin: -2px;
-    }
+    transition: all 150ms $ease-in-out-primary;
+    max-width: rem(30);
     &:hover{
       transform: scale(1.25);
-    }
-    @include mq(xs){
-      width: rem(30);
-      height: rem(30);
-      border-radius:rem(30);
     }
   }
   svg{
     display: inline-block;
     fill: $main-color;
     height: 100%;
-    width: 50%;
     box-sizing: border-box;
     vertical-align: middle;
+  }
+
+  ellipse{
+    fill:$ternary-color;
   }
 
   @include mq(xs){

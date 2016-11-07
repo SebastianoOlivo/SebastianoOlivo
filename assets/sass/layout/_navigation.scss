@@ -45,15 +45,13 @@ nav[role=navigation] {
         font-family: $ternary-font;
     }
 
-    img {
-        display: block;
-        width: 100%;
-        margin: 0 auto;
-        max-height: 75px;
-        margin-bottom: 0.5rem;
-        transition: all 500ms $ease-in-out-primary;
+    svg {
+        transition: all 150ms $ease-in-out-primary;
         &:hover{
           transform: scale(1.25);
+        }
+        path{
+                  fill:$ternary-color;
         }
       }
 }

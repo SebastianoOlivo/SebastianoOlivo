@@ -59,6 +59,7 @@ font-weight: 300;
 	font-family: "Redlight-line", sans-serif;
 	font-size: rem(64);
 	color: #d5b88a;
+  opacity: 0.4;
 	@include  mq(xs){
 		font-size: rem(90);
 	}
@@ -68,7 +69,8 @@ font-weight: 300;
 }
 
 .site-catch-phrase{
-	color:#b78846;
+  position: relative;
+	color:#faf0db;
 }
 .section-block__title{
 	font-family: $secondary-font;
@@ -76,7 +78,6 @@ font-weight: 300;
 .section-block__subTitle{
 
 }
-
 
 .step-block__title{
 line-height: 1em;

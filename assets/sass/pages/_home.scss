@@ -55,62 +55,6 @@ svg{
 
 }
 
-%triangle-down{
-  box-sizing: content-box;
-  display: block;
-      overflow: hidden;
-  background:$main-color;
-  width: 100%;
-  padding-bottom: 20%;
-  &:before{
-    content: "";
-    background: aqua;
-    display: block;
-    position: absolute;
-    bottom: 0;
-    width: 100vw;
-    height: 100%;
-    transform: rotate(90deg);
-
-  }
-}
-
-%triangle-lr{
-  position: absolute;
-  top: -100px;
-  box-sizing: content-box;
-  width: 50%;
-  height: 0;
-  padding-left: 50%;
-  overflow: hidden;
-  background: transparent;
-  padding-top: 100px;
-  z-index:4;
-  &:before, &:after{
-    position: absolute;
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    width: 0;
-    height: 0;
-    border-top: 100px solid transparent;
-    border-bottom: 150px solid transparent;
-
-  }
-  &:before{
-    left: 0;
-        border-left: 500px solid $main-color;
-  }
-  &:after{
-    right: 0;
-      border-right: 500px solid $main-color;
-
-  }
-
-}
-
-
 .page{
   position: relative;
 }
@@ -119,7 +63,7 @@ svg{
 .section-block, .step-block{
   display: flex;
   flex-direction:column;
-  min-height: 75vh;
+  min-height: 50vh;
   background-size: cover !important;
   position: relative;
   text-align: center;
@@ -165,9 +109,6 @@ svg{
     bottom: 0;
     z-index:2;
   }
-  .section-block__decoration{
-    @extend %triangle-lr;
-  }
 }
 
 
@@ -181,12 +122,14 @@ svg{
 
 }
 
-.section-block__icon{
-  margin: 0 auto;
-  max-height: 100px;
-  max-width: 100px;
-
+.section-block__icon {
+  max-width: 75px;
+  max-height: 75px;
+  path{
+    fill:$ternary-color;
+  }
 }
+
 
 .section-block__btn{
   background: $ternary-color;
@@ -204,7 +147,7 @@ svg{
 
 .step-holder{
   display: block;
-  min-height: 75vh;
+  min-height: 50vh;
 }
 
 .step-holder--01{
@@ -268,7 +211,7 @@ svg{
     left:0;
     right: 0;
     bottom: 0;
-    z-index:2;
+    z-index:0;
   }
 }
 
