@@ -401,7 +401,8 @@ header[role=banner] {
     display: block;
     text-align: center;
     transition: all 150ms cubic-bezier(0.77, 0, 0.175, 1);
-    max-width: 1.875rem; }
+    max-width: 1.875rem;
+    max-height: 1.875rem; }
     .social a:hover {
       transform: scale(1.25); }
   .social svg {
@@ -509,7 +510,7 @@ h1, h2, h3, h4 {
   color: #faf0db; }
 
 .section-block__title {
-  font-family: "Fjalla One", sans-serif; }
+  font-family: "Redlight-stylistic", sans-serif; }
 
 .step-block__title {
   line-height: 1em; }
