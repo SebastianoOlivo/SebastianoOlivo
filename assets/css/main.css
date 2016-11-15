@@ -213,6 +213,193 @@ svg {
 .step-holder--04 .step-block {
   background: url("../../assets/images/website/step04.png") 50% 0 no-repeat; }
 
+.project {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  overflow-x: scroll; }
+  .project figcaption {
+    padding: 1rem;
+    box-sizing: border-box; }
+    @media all and (min-width: 48rem) {
+      .project figcaption {
+        max-width: 33%; } }
+
+.projects__content__item {
+  position: relative; }
+
+.project__cover {
+  background: #FFF;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 400px;
+  overflow: hidden;
+  z-index: 5;
+  transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  pointer-events: none; }
+  .project__cover .sticker {
+    position: absolute;
+    bottom: 0;
+    left: 0; }
+  .project__cover .presentation {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 80%;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem; }
+  .project__cover .logo {
+    width: 6.25rem; }
+
+.project__cover__image {
+  background-position: center center;
+  width: 100%;
+  height: 100vh;
+  transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1); }
+
+.fold {
+  left: -400px; }
+
+.show-info .project__cover__image {
+  height: 30vh; }
+
+.show-info .sticker {
+  left: -400px; }
+
+.project__content {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100%;
+  margin-left: 320px; }
+  .project__content h3 {
+    font-family: "Fjalla One", sans-serif;
+    font-size: 1.75rem; }
+
+.project__content--2 {
+  width: 200vw; }
+
+.project__content--3 {
+  width: 300vw; }
+
+.project__content--4 {
+  width: 400vw; }
+
+.project__content--5 {
+  width: 500vw; }
+
+.project__content--6 {
+  width: 600vw; }
+
+.project__content--7 {
+  width: 700vw; }
+
+.project__content--8 {
+  width: 800vw; }
+
+.project__content--9 {
+  width: 900vw; }
+
+.project__content--10 {
+  width: 1000vw; }
+
+.projects__content__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  height: 100%;
+  margin: 0; }
+  @media all and (min-width: 48rem) {
+    .projects__content__item {
+      flex-direction: row;
+      align-items: center; } }
+  .projects__content__item img {
+    max-width: 100%; }
+
+.projects__content__item--dark {
+  color: #FFF; }
+
+.projects__content__item--bright {
+  color: #13131B; }
+
+.sticker {
+  max-width: 400px;
+  margin: 1rem 0 1rem -1rem;
+  background: #FFF;
+  padding: 0.2rem;
+  transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1); }
+
+.sticker__list__item {
+  padding: 1rem; }
+
+.sticker__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 1px solid #13131B; }
+
+.sticker__title {
+  text-transform: uppercase;
+  font-size: 1.75rem;
+  border-right: 1px solid #13131B;
+  flex-grow: 2;
+  text-align: center; }
+
+.sticker__date {
+  padding: 0;
+  text-align: center; }
+  .sticker__date time, .sticker__date span {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.5em 1em; }
+  .sticker__date time {
+    font-size: 0.75rem;
+    border-bottom: 1px solid #13131B; }
+  .sticker__date span {
+    font-size: 1.5rem; }
+
+.sticker__info {
+  border-top: 1px solid #13131B;
+  text-align: center;
+  width: 100%; }
+  .sticker__info ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+  .sticker__info li + li:before {
+    content: ", "; }
+
+.video-element {
+  position: relative;
+  overflow: hidden; }
+  .video-element img {
+    position: relative;
+    z-index: 2;
+    pointer-events: none; }
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 100%;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  z-index: 1; }
+  .video-container iframe, .video-container object, .video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
 /*Nav
 ############################################################
 */
@@ -309,8 +496,10 @@ nav {
 
 .menu-active nav {
   left: 0; }
+
 .menu-active .nav-btn {
   right: 0; }
+
 .menu-active span {
   transition: background 0.3s 0s ease;
   background: transparent; }
@@ -439,7 +628,7 @@ body {
   margin: 0;
   padding: 0;
   background: #fff;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Raleway", sans-serif; }
 
 .page {
   position: relative; }
@@ -458,12 +647,14 @@ button {
   font-family: 'Redlight-line';
   src: url("../../assets/fonts/The Redlight Line Bold.ttf") format("truetype"), url("../../assets/fonts/The Redlight Line Bold.otf") format("opentype");
   /* Legacy iOS */ }
+
 @font-face {
   font-family: 'Redlight-stylistic';
   src: url("../../assets/fonts/The Redlight Stylistic.ttf") format("truetype"), url("../../assets/fonts/The Redlight Stylistic.otf") format("opentype");
   /* Legacy iOS */ }
+
 html {
-  font: normal 100%/1.5 "Open Sans", sans-serif; }
+  font: normal 100%/1.5 "Raleway", sans-serif; }
 
 h1, h2, h3, h4 {
   margin: 0; }
@@ -523,6 +714,6 @@ h1, h2, h3, h4 {
     text-decoration: underline;
     content: "step";
     text-transform: capitalize;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Raleway", sans-serif;
     display: block;
     text-align: center; }

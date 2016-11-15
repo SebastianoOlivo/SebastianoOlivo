@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<article class="project">
+  <section class="project__cover">
+    {% include sticker.html type="project" %}
+    <div class="project__cover__image" style="background:url(/assets/images/projects/{{page.cover}}) 50% 50% no-repeat"></div>
+    <div class="presentation">
+      <img class="logo" src="/assets/images/projects/{{page.logo[0]}}"
+                    srcset="/assets/images/projects/{{page.logo[1]}}  2x"
+                    sizes="100vw"
+    alt="logo of {{page.title}}">
+      <h2>{{page.title}}</h2>
+      <p>{{page.excerpt}}</p>
+    </div>
+  </section>
+  <section class="project__content project__content--{{page.itemNumber}}">
+  {{content}}
+  </section>
+</article>

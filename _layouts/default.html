@@ -12,21 +12,17 @@
     <meta name="description" content="description">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans:400,700|Raleway:300" rel="stylesheet">
-    <link rel="stylesheet" media="screen" href="{{siteUrl}}assets/css/main.css">
+    <link rel="stylesheet" media="screen" href="/assets/css/main.css">
 </head>
 
 <body>
     <div class="container" id="container">
         {% include nav.html %}
         <div class="page">
-            {% include header.html %}
-
             {{ content }}
-
-            {% include footer.html %}
         </div>
     </div>
-    <script type="text/javascript" async="" src="{{siteUrl}}assets/js/main.js">
+    <script type="text/javascript" async="" src="/assets/js/main-min.js">
     </script>
 </body>
 

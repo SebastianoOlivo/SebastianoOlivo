@@ -1,0 +1,32 @@
+<section class="sticker sticker--{{include.type}}">
+    <ul class="sticker__list">
+        <li class="sticker__list__item sticker__title">
+            <h2>{{page.title}}</h2>
+
+        </li>
+        {% if include.type == "magazine"%}
+        <li class="sticker__list__item sticker__tags">
+            <ul>
+                {% for item in page.tags %}
+                <li>{{item}}</li>
+                {% endfor %}
+            </ul>
+        </li>
+        {% endif %}
+
+        <li class="sticker__list__item sticker__date">
+            <time>{{page.date | date: "%Y"}}</time>
+            <span>{{count}}</span>
+        </li>
+
+        <li class="sticker__list__item sticker__info">
+            <h3>Client : {{page.client}}</h3> {% if include.type == "project"%}
+            <ul class="sticker__tags">
+                {% for item in page.tags %}
+                <li>{{item}}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </li>
+    </ul>
+</section>
