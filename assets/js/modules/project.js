@@ -60,7 +60,7 @@ function scrollDirection(event) {
 
     if (event) {
         var direction = "",
-            deltaX = event.deltaX;
+            deltaX = event.deltaX,
             deltaY = event.deltaY;
         if (deltaX >= 1 || deltaY >= 1) {
             direction = "next";
@@ -123,13 +123,13 @@ window.addEventListener('DOMContentLoaded', function() {
       _handelScroll(event);
     },200));
 
-    project.addEventListener('touchstart', _.throttle(function(event) {
+    document.addEventListener('touchstart', function(event) {
       console.log(event);
         touchGesture.touchstart = {
             x: event.screenX,
             y: event.screenX
         };
-    },200));
+    });
 
     document.addEventListener('touchend', function(event) {
       console.log(event);
