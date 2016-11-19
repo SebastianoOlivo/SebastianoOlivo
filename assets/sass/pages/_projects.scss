@@ -3,7 +3,6 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  overflow-x: scroll;
   figcaption{
     padding: 1rem;
     box-sizing: border-box;
@@ -19,7 +18,7 @@
 
 .project__cover{
   background: $main-color;
-  position: fixed;
+  position: absolute;
   top:0;
   left:0;
   width: 100%;
@@ -71,11 +70,15 @@
   }
 }
 .project__content{
+  position: absolute;
+  top: 0;
+  left:0;
   display: flex;
   flex-direction: row;
   width: 100vw;
   height: 100%;
   margin-left: 320px;
+  transition: all 300ms $ease-in-out-primary;
   h3{
     font-family: $secondary-font;
     font-size: rem(28);
