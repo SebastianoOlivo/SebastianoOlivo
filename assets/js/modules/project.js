@@ -8,7 +8,7 @@ var project = body.querySelector('.project'),
     currentItem = 0,
     touchGesture = {},
     lastTime = 0,
-    animationDuration = 500,
+    animationDuration = 300,
     quietPeriod = 800;
 
 
@@ -42,14 +42,16 @@ function enableScrolling() {
 
 function swipedirection(event) {
     if (event) {
-        var direction = "";
+        var direction = "",
+        deltaX = touchGesture.touchstart.x - touchGesture.touchend.x,
+        deltaY = touchGesture.touchstart.y - touchGesture.touchend.y;
 console.log('startx: ' + touchGesture.touchstart.x);
 console.log('endx: ' + touchGesture.touchend.x);
 console.log('starty: ' + touchGesture.touchstart.y);
 console.log('endy: ' + touchGesture.touchend.y);
-        if (touchGesture.touchstart.x > touchGesture.touchend.x || touchGesture.touchstart.y > touchGesture.touchend.y) {
+        if (deltaX >= 50 || deltaY >= 50) {
             direction = "next";
-        } else {
+        } else if(deltaX >= -50 || deltaY >= -50){
             direction = "prev";
         }
         scrollProject(direction);
