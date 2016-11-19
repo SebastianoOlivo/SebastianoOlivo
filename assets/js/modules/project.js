@@ -43,8 +43,11 @@ function enableScrolling() {
 function swipedirection(event) {
     if (event) {
         var direction = "";
-
-        if (touchGesture.touchstart.x < touchGesture.touchend.x || touchGesture.touchstart.y < touchGesture.touchend.y) {
+console.log('startx: ' + touchGesture.touchstart.x);
+console.log('endx: ' + touchGesture.touchend.x);
+console.log('starty: ' + touchGesture.touchstart.y);
+console.log('endy: ' + touchGesture.touchend.y);
+        if (touchGesture.touchstart.x > touchGesture.touchend.x || touchGesture.touchstart.y > touchGesture.touchend.y) {
             direction = "next";
         } else {
             direction = "prev";
@@ -101,7 +104,6 @@ function scrollProject(direction) {
 
 
 function _handelScroll(event) {
-  console.log("cc");
     event.preventDefault();
 
     if (infoNotshown && enableScrolling()) {
@@ -111,31 +113,33 @@ function _handelScroll(event) {
         projectContent.style.margin = 0;
     } else if (event.type === "wheel" && enableScrolling()) {
         scrollDirection(event);
+    } else if(event.type === "touchend" && enableScrolling()){
+      swipedirection(event);
     }
 }
 
-window.addEventListener('DOMContentLoaded', function() {
-    project.addEventListener('touchmove', _.throttle(function(event) {
+window.addEventListener('load', function() {
+    /*project.addEventListener('touchmove', _.throttle(function(event) {
       _handelScroll(event);
-    },200));
+    },200));*/
 
     project.addEventListener('wheel', _.throttle(function(event) {
       _handelScroll(event);
     },200));
 
     document.addEventListener('touchstart', function(event) {
-      console.log(event);
+      //console.log(event);
         touchGesture.touchstart = {
-            x: event.screenX,
-            y: event.screenX
+            x: event.changedTouches[0].screenX,
+            y: event.changedTouches[0].screenY
         };
     });
 
     document.addEventListener('touchend', function(event) {
-      console.log(event);
+      //console.log(event);
         touchGesture.touchend = {
-            x: event.screenX,
-            y: event.screenX
+            x: event.changedTouches[0].screenX,
+            y: event.changedTouches[0].screenY
         };
 
         _handelScroll(event);
