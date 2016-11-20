@@ -237,7 +237,7 @@ svg {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vw;
+  height: 100vh;
   max-width: 400px;
   overflow: hidden;
   z-index: 5;
@@ -319,9 +319,9 @@ svg {
   flex-direction: column;
   justify-content: center;
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   margin: 0; }
-  @media all and (min-width: 48rem) {
+  @media all and (min-width: 35.5rem) {
     .projects__content__item {
       flex-direction: row;
       align-items: center; } }
