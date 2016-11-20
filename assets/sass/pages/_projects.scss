@@ -7,10 +7,10 @@
     padding: 1rem;
     box-sizing: border-box;
     @include mq(xs){
-          max-width: 50%;
+          width: 50%;
     }
     @include mq(sm){
-          max-width: 33%;
+          width: 33%;
     }
   }
 }
@@ -129,6 +129,12 @@
 
   img{
     max-width: 100%;
+    @include  mq(xs){
+      max-width: 50%;
+    }
+    @include mq(md){
+      max-width: 100%;
+    }
   }
 }
 

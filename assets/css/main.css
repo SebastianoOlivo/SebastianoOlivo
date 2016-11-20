@@ -223,10 +223,10 @@ svg {
     box-sizing: border-box; }
     @media all and (min-width: 35.5rem) {
       .project figcaption {
-        max-width: 50%; } }
+        width: 50%; } }
     @media all and (min-width: 48rem) {
       .project figcaption {
-        max-width: 33%; } }
+        width: 33%; } }
 
 .projects__content__item {
   position: relative; }
@@ -327,6 +327,12 @@ svg {
       align-items: center; } }
   .projects__content__item img {
     max-width: 100%; }
+    @media all and (min-width: 35.5rem) {
+      .projects__content__item img {
+        max-width: 50%; } }
+    @media all and (min-width: 64rem) {
+      .projects__content__item img {
+        max-width: 100%; } }
 
 .projects__content__item--dark {
   color: #FFF; }
