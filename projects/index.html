@@ -11,14 +11,25 @@ tags:
 
 ---
 
-<article>
-  <section class="cover">
-    <a href="">
-    {% include sticker.html type="project" %}
-    <img src="/assets/images/project/magazine_cover_small.png"
-                  srcset="/assets/images/project/magazine_cover.png  600"
-                  sizes="100vw"
-  alt="logo of {{title}}">
-  </a>
+
+  <section class="magazine">
+    <header>
+      <h1>{{page.title}}</h1>
+    </header>
+
+  <section class="index-magazine">
+    {% for item in site.posts %}
+      {% if foorloop.first %}<ul>{% endif %}
+        <li>
+          <a href="{{ item.url }}">
+            <img src="/assets/images/projects/{{item.cover}}" alt="">
+            <h3>{{ item.title }}</h3>
+            <p>{{item.excerpt}}</p>
+          </a>
+        </li>
+      {% if foorloop.last %}</ul>{% endif %}
+      {% else %}
+      <p>No blogposts found</p>
+    {% endfor %}
   </section>
-</article>
+  </section>
