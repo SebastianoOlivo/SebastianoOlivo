@@ -6,21 +6,32 @@ layout: default
     <div class="project__info">
       <h2 class="project__info__client">{{page.client}}</h2>
         <h1 class="project__info__title">{{page.title}}</h1>
-        <p class="project__info__text">{{content}}</p>
+        <p class="project__info__text">{{content}}
 
         {% if page.project-website != "" %}
         <a href="{{project-website}}">Website url</a>
         {% elsif page.project-video %}
-        <button class="play-video">Play video</button>
+        <button class="play-video button">Play video</button>
         {% endif %}
+        </p>
     </div>
     <div class="project-video">
       <div class="video-container">
-        <iframe src="{{page.project-video}}" width="640" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <div data-vimeo-url="{{page.project-video}}" id="project-video"></div>
       </div>
+      <button class="hide-video" type="button" name="button">
+        <svg fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+            <path d="M0 0h24v24H0z" fill="none"/>
+        </svg>
+      </button>
     </div>
     <button class="show-more"><svg class="show-more__icon" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
         <path d="M0 0h24v24H0z" fill="none"/>
         <path d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
     </svg><span>more info</span></button>
 </article>
+
+
+<script src="https://player.vimeo.com/api/player.js"></script>
+<script type="text/javascript" async="" src="/assets/js/project-min.js">
