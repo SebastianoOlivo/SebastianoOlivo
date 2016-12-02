@@ -2,10 +2,20 @@
 {
 	background: $ternary-color;
   color: $main-color;
-  font-size: em(18);
+  font-size: rem(18);
   font-family: $secondary-font;
   padding: 0.8em 2em;
   border: none;
   border-radius: 3px;
   text-transform: uppercase;
+}
+
+.button--svg{
+	  padding: 0;
+	  background-color: transparent;
+	  border: none;
+	  svg{
+	    display: inline-block;
+	    vertical-align: middle;
+	  }
 }

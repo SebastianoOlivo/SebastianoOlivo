@@ -303,17 +303,13 @@ svg {
   bottom: 0;
   left: 0;
   margin: 1rem;
-  padding: 0;
-  background-color: transparent;
-  border: none;
   color: #FFF;
   z-index: 3; }
-  .show-more svg, .show-more span {
-    display: inline-block;
-    vertical-align: middle; }
   .show-more span {
     font-size: 1rem;
-    padding-left: 0.5rem; }
+    padding-left: 0.5rem;
+    display: inline-block;
+    vertical-align: middle; }
 
 .show-more__icon {
   width: 2rem;
@@ -351,7 +347,9 @@ svg {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
-  position: fixed;
+  position: absolute;
+  bottom: -100%;
+  left: 0;
   z-index: 0;
   opacity: 0;
   user-select: none;
@@ -382,9 +380,6 @@ svg {
 .project__info--unfold:after {
   background-color: rgba(0, 0, 0, 0.9); }
 
-.project__info--unfold .project__info {
-  bottom: 30%; }
-
 .project__info--unfold .project__info__title {
   font-family: "Redlight-stylistic", sans-serif;
   font-size: 4.25rem; }
@@ -396,8 +391,43 @@ svg {
   transform: rotate(135deg); }
 
 .project-video--play {
+  bottom: 0;
   opacity: 1;
   z-index: 11; }
+
+.hide-video {
+  position: absolute;
+  left: 50%;
+  bottom: -2.25rem;
+  margin-left: -0.5625rem; }
+  .hide-video svg {
+    fill: #DDAA62; }
+
+.contact-info--nav {
+  background: #FFF;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #121516;
+  transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  z-index: 2;
+  padding: 1rem;
+  box-sizing: border-box; }
+  .contact-info--nav p {
+    max-width: 540px; }
+  .contact-info--nav svg {
+    max-width: 72px; }
+  .contact-info--nav path {
+    fill: #DDAA62; }
+
+.contact .contact-info--nav {
+  left: 0; }
 
 /*Nav
 ############################################################
@@ -600,12 +630,20 @@ header[role=banner] {
 .button {
   background: #DDAA62;
   color: #FFF;
-  font-size: 1.125em;
+  font-size: 1.125rem;
   font-family: "Fjalla One", sans-serif;
   padding: 0.8em 2em;
   border: none;
   border-radius: 3px;
   text-transform: uppercase; }
+
+.button--svg {
+  padding: 0;
+  background-color: transparent;
+  border: none; }
+  .button--svg svg {
+    display: inline-block;
+    vertical-align: middle; }
 
 a {
   text-decoration: none; }
