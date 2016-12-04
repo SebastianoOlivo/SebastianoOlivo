@@ -20,7 +20,6 @@ var body = document.getElementsByTagName('body')[0],
 function toggleMenu() {
     container.classList.toggle('menu-active');
     if(container.classList.contains('project') || container.classList.contains('contact')){
-console.log('test');
       container.classList = 'container';
     }
 }
@@ -32,12 +31,13 @@ function _menuActions(event) {
     if (activeItem !== "") {
         container.classList.remove(activeItem);
     }
-    if (elemAtt !== "") {
+    if (elemAtt !== null) {
+      console.log('yop');
         event.preventDefault();
         container.classList.add(elemAtt);
 
     } else {
-      var url = event.getElementsByTagName('A')[0];
+      var url = event.currentTarget.getElementsByTagName('A')[0];
       url = url.getAttribute('href');
       window.location.href = url;
 
@@ -47,7 +47,7 @@ function _menuActions(event) {
 
 window.addEventListener("load", function() {
     navBtn.addEventListener('click', toggleMenu);
-    if(projectBtn != null) {
+    if(projectBtn !== null) {
       projectBtn.addEventListener('click', _menuActions);
     }
     for (var i = navItems.length; i--;) {
