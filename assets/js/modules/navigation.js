@@ -25,10 +25,7 @@ function _menuActions(event) {
         event.preventDefault();
         container.classList.add(elemAtt);
 
-    }if (elemAtt === 'project') {
-        window.scrollTo(0, 0);
-
-    } else {
+    }else {
       var url = event.currentTarget.getElementsByTagName('A')[0];
       url = url.getAttribute('href');
       window.location.href = url;

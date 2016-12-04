@@ -3,7 +3,7 @@
     <ul class="project-list">
         <li class="project-list__item last-project">{% endif %}
             <a href="{{ item.url }}" style="background-image:url(/assets/images/projects/{{item.project-thumbnail}});">
-                <h2>{{ item.title }}</h2>
+                <h2>{{forloop.index}} {{ item.title }}</h2>
             </a>
             {% if forloop.last == false %}</li><li class="project-list__item"> {% else %}
         </li></ul>
