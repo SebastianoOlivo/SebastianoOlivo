@@ -32,9 +32,11 @@ function _menuActions(event) {
         container.classList.remove(activeItem);
     }
     if (elemAtt !== null) {
-      console.log('yop');
         event.preventDefault();
         container.classList.add(elemAtt);
+
+    }if (elemAtt === 'project') {
+        window.scrollTo(0, 0);
 
     } else {
       var url = event.currentTarget.getElementsByTagName('A')[0];
