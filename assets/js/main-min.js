@@ -19,11 +19,13 @@ var body = document.getElementsByTagName('body')[0],
 
 function toggleMenu() {
     container.classList.toggle('menu-active');
+    if(container.classList.contains('project') || container.classList.contains('contact')){
+console.log('test');
+      container.classList = 'container';
+    }
 }
 
 function _menuActions(event) {
-  var url = event.getElementsByTagName('A')[0];
-  url = url.getAttribute('href');
     event.preventDefault();
     var elem = event.currentTarget,
         elemAtt = elem.getAttribute("data-navBtn");
@@ -35,11 +37,12 @@ function _menuActions(event) {
         container.classList.add(elemAtt);
 
     } else {
+      var url = event.getElementsByTagName('A')[0];
+      url = url.getAttribute('href');
       window.location.href = url;
 
     }
     activeItem = elemAtt;
-    toggleMenu();
 }
 
 window.addEventListener("load", function() {

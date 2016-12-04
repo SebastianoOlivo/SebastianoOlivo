@@ -142,7 +142,7 @@ svg {
     top: 0;
     left: 0;
     margin-top: -1px;
-    z-index: 5; }
+    z-index: 4; }
   .step-holder--01 polygon {
     fill: #FFF;
     stroke-width: 0; }
@@ -156,7 +156,7 @@ svg {
     bottom: 0;
     left: 0;
     margin-bottom: -1px;
-    z-index: 5;
+    z-index: 4;
     transform: skewY(12deg); }
   .step-holder--04 polygon {
     fill: #FFF;
@@ -369,8 +369,7 @@ svg {
   background-color: rgba(0, 0, 0, 0.9); }
 
 .project__info--unfold .project__info__title {
-  font-family: "Redlight-stylistic", sans-serif;
-  font-size: 4.25rem; }
+  font-size: 3.5rem; }
 
 .project__info--unfold .project__info__text {
   max-height: 100vh; }
@@ -381,7 +380,7 @@ svg {
 .project-video--play {
   bottom: 0;
   opacity: 1;
-  z-index: 11; }
+  z-index: 4; }
 
 .hide-video {
   position: absolute;
@@ -404,7 +403,7 @@ svg {
   align-items: center;
   color: #121516;
   transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
-  z-index: 2;
+  z-index: 5;
   padding: 1rem;
   box-sizing: border-box; }
   @media all and (min-width: 48rem) {

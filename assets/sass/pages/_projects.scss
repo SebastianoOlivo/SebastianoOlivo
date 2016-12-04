@@ -193,8 +193,7 @@
 
   }
   .project__info__title {
-    font-family: "Redlight-stylistic", sans-serif;
-    font-size: rem(68);
+    font-size: rem(56);
   }
   .project__info__text{
     max-height: 100vh;
@@ -207,7 +206,7 @@
 .project-video--play{
   bottom: 0;
   opacity: 1;
-  z-index: 11;
+  z-index: 4;
 
 }
 
