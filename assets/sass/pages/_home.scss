@@ -109,23 +109,9 @@ svg{
 }
 
 .section-block__icon {
-  max-width: 75px;
-  max-height: 75px;
   path{
     fill:$ternary-color;
   }
-}
-
-
-.section-block__btn{
-  background: $ternary-color;
-  color: $main-color;
-  font-size: em(18);
-  font-family: $secondary-font;
-  padding: 0.8em 2em;
-  border: none;
-  border-radius: 3px;
-  text-transform: uppercase;
 }
 
 /*Step block*/

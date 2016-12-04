@@ -14,19 +14,24 @@
   z-index: 2;
   padding: 1rem;
   box-sizing: border-box;
-  p{
-    max-width: 540px;
+  .section-block__title{
+    @include mq(sm){
+      font-size: rem(100);
+    }
   }
-  svg{
-    max-width: 72px;
+  p{
+    max-width: 460px;
+    text-align: center;
+    margin-top: 2rem;
   }
     path{
       fill:$ternary-color;
     }
+  a{
+    font-size: rem(21);
+    color: $ternary-color;
+  }
 }
-
-
-
 
 .contact .contact-info--nav{
   left: 0;

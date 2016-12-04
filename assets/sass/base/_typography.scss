@@ -22,38 +22,52 @@ html
 h1, h2, h3, h4
 {
 	margin:0;
+  line-height: 1em;
+  text-align: center;
 }
 
-.site-title, .site-catch-phrase, .site-title--decorative{
+.site-title,
+.site-title--decorative,
+.site-catch-phrase,
+.section-block__title,
+.step-block__title{
 	line-height: 1em;
-  font-weight: 400;
 }
 
-
- .section-block__title, .step-block__number, .step-block__title{
+.site-title,
+.section-block__title,
+.step-block__number,
+.step-block__title{
 	font-size: rem(48);
 	font-weight: 400;
 }
 
-.section-block__title, .step-block__number, .step-block__title{
-		font-family: $secondary-font;
+
+.step-block__number, .step-block__title{
+	font-family: $secondary-font;
 }
 
 .site-catch-phrase, .section-block__subTitle{
-font-family: $ternary-font;
-font-weight: 300;
+  font-family: $main-font;
+  font-weight: 300;
+}
+
+.site-title, .section-block__title{
+	font-family: $ternary-font;
 }
 
 .site-title{
-	font-family: "Redlight-stylistic", sans-serif;
-	font-size: rem(48);
-	color: $main-color;
+  color: $main-color;
 	@include  mq(xs){
 		font-size: rem(72);
 	}
 	@include  mq(md){
 		font-size: rem(110);
 	}
+}
+
+.section-block__subTitle{
+  font-size: rem(18);
 }
 
 .site-title--decorative{
@@ -73,15 +87,11 @@ font-weight: 300;
   position: relative;
 	color:#faf0db;
 }
+
 .section-block__title{
-  font-family: "Redlight-stylistic", sans-serif;
-}
-.section-block__subTitle{
-
-}
-
-.step-block__title{
-line-height: 1em;
+  @include  mq(sm){
+		font-size: rem(64);
+	}
 }
 
 .step-block__number{

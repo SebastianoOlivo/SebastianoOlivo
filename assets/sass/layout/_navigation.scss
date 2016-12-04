@@ -10,7 +10,6 @@ nav[role=navigation] {
     transition: all 500ms $ease-in-out-primary;
 }
 
-
 .rounded-menu{
   background: $secondary-color;
   position: fixed;
@@ -71,7 +70,7 @@ nav[role=navigation] {
         text-decoration: none;
         color: $ternary-color;
         text-transform: uppercase;
-        font-family: $ternary-font;
+        font-family: $main-font;
     }
 
     svg {
