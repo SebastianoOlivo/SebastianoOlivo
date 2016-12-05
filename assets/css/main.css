@@ -194,7 +194,7 @@ svg {
   z-index: 5;
   overflow-y: scroll; }
 
-.project .project__index {
+.project-active .project__index {
   right: 0; }
 
 .project-list {
@@ -398,7 +398,7 @@ svg {
     font-size: 1.3125rem;
     color: #DDAA62; }
 
-.contact .contact-info--nav {
+.contact-active .contact-info--nav {
   left: 0; }
 
 /*Nav
@@ -482,7 +482,8 @@ nav[role=navigation] {
   height: 3.375rem;
   z-index: 3;
   display: inline-block;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: all 250ms cubic-bezier(0.77, 0, 0.175, 1); }
   .nav-btn svg {
     max-width: 48px;
     padding: 3px;
@@ -497,6 +498,12 @@ nav[role=navigation] {
 .menu-active .mainnav {
   transform: scale(1);
   border-size: 6px; }
+
+.project-active .nav-btn {
+  transform: rotate(-215deg); }
+
+.contact-active .nav-btn {
+  transform: rotate(-270deg); }
 
 header[role=banner] {
   position: relative;

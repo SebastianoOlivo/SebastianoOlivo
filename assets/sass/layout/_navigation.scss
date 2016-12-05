@@ -96,6 +96,8 @@ nav[role=navigation] {
     z-index: 3;
     display: inline-block;
     cursor: pointer;
+    transition: all 250ms $ease-in-out-primary;
+
 
     svg{
       max-width: 48px;
@@ -121,4 +123,12 @@ nav[role=navigation] {
         transform: scale(1);
         border-size:6px;
     }
+}
+
+.project-active .nav-btn{
+  transform: rotate(-215deg);
+}
+
+.contact-active .nav-btn{
+  transform: rotate(-270deg);
 }
