@@ -37,9 +37,7 @@ svg{
     .step-block{
     position: relative;
     transform: skewY(-$angle);
-
     }
-
 }
 
 .page{
@@ -63,40 +61,9 @@ svg{
 .section-block{
     justify-content: flex-start;
     padding-top: 5%;
-  color: $secondary-color;
-  z-index: 4;
+    color: $secondary-color;
+    z-index: 4;
 }
-
-.section-block--vision{
-}
-
-
-.section-block--contact{
-  background: url('../../assets/images/website/contact.png') 50% 0 no-repeat;
-  &:before{
-    @include linear-gradient(#FFF, rgba(255, 255, 255, 0.1) 45%);
-    content: "";
-    position: absolute;
-    top:0;
-    left:0;
-    right: 0;
-    bottom: 0;
-    z-index:2;
-  }
-}
-
-.section-block--projects{
-  &:before{
-    content: "";
-    position: absolute;
-    top:0;
-    left:0;
-    right: 0;
-    bottom: 0;
-    z-index:2;
-  }
-}
-
 
 
 .section-block__content, .step-block__content{
@@ -115,8 +82,6 @@ svg{
 }
 
 /*Step block*/
-
-
 .step-holder{
   display: block;
   min-height: 50vh;
