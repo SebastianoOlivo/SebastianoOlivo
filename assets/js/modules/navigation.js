@@ -1,48 +1,50 @@
-var body = document.getElementsByTagName('body')[0],
-    container = body.querySelectorAll('.container')[0],
+var container = document.querySelectorAll('.container')[0],
+    page = container.querySelector('.page'),
     navBtn = container.querySelectorAll('.nav-btn')[0],
     navItems = container.querySelectorAll('.mainnav__item'),
     footerNavItems = container.querySelectorAll('.footer-nav__item'),
-    projectBtn = document.querySelector('.project-btn'),
-    activeItem = "";
+    projectBtn = document.querySelector('.project-btn');
 
+function navState(isActive, elem, value) {
+    if (isActive && elem === page) {
+        container.classList = 'container';
+    } else if (isActive && elem === navBtn) {
+        container.classList = 'container';
 
-function toggleMenu() {
-    container.classList.toggle('menu-active');
-    if(container.classList.contains('project') || container.classList.contains('contact')){
-      container.classList = 'container';
+    } else if (!isActive && elem === navBtn) {
+        container.classList.add('menu-active');
+
+    } else if (value !== null && value === "vision-active") {
+        var url = elem.getElementsByTagName('A')[0].getAttribute('href');
+        window.location.href = url;
+    } else if (value !== null) {
+        container.classList = 'container menu-active ' + value;
     }
+
 }
 
-function _menuActions(event) {
+function _navEventHandler(event) {
     event.preventDefault();
+    event.stopPropagation();
     var elem = event.currentTarget,
-        elemAtt = elem.getAttribute("data-navBtn");
-    if (activeItem !== "") {
-        container.classList.remove(activeItem);
-    }
-    if (elemAtt !== null) {
-        event.preventDefault();
-        container.classList.add(elemAtt);
-
-    }else {
-      var url = event.currentTarget.getElementsByTagName('A')[0];
-      url = url.getAttribute('href');
-      window.location.href = url;
-
-    }
-    activeItem = elemAtt;
+        elemAtt = elem.getAttribute("data-activeItem"),
+        isActif = container.classList.contains('menu-active');
+    navState(isActif, elem, elemAtt);
 }
+
+
 
 window.addEventListener("load", function() {
-    navBtn.addEventListener('click', toggleMenu);
-    if(projectBtn !== null) {
-      projectBtn.addEventListener('click', _menuActions);
+    var i = 0;
+    navBtn.addEventListener('click', _navEventHandler);
+    page.addEventListener('click', _navEventHandler);
+    if (projectBtn !== null) {
+        projectBtn.addEventListener('click', _navEventHandler);
     }
-    for (var i = navItems.length; i--;) {
-        navItems[i].addEventListener('click', _menuActions);
+    for (i = navItems.length; i--;) {
+        navItems[i].addEventListener('click', _navEventHandler);
     }
-    for (var i = footerNavItems.length; i--;) {
-        footerNavItems[i].addEventListener('click', _menuActions);
+    for (i = footerNavItems.length; i--;) {
+        footerNavItems[i].addEventListener('click', _navEventHandler);
     }
 });

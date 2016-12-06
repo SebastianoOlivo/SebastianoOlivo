@@ -8,52 +8,54 @@ d}var s,b,y,d,m,g,j=0,v=false,x=false,T=true;if(typeof e!="function")throw new T
 var n;if(null==t)n=t===f?"[object Undefined]":"[object Null]";else if(t=Object(t),x&&x in t){e=j.call(t,x);var o=t[x];try{t[x]=f,n=true}catch(t){}var i=v.call(t);n&&(e?t[x]=o:delete t[x]),n=i}else n=v.call(t);e="[object Symbol]"==n}return e}function u(t){if(typeof t=="number")return t;if(i(t))return a;if(o(t)&&(t=typeof t.valueOf=="function"?t.valueOf():t,t=o(t)?t+"":t),typeof t!="string")return 0===t?t:+t;t=t.replace(c,"");var e=p.test(t);return e||s.test(t)?b(t.slice(2),e?2:8):l.test(t)?a:+t}var f,a=NaN,c=/^\s+|\s+$/g,l=/^[-+]0x[0-9a-f]+$/i,p=/^0b[01]+$/i,s=/^0o[0-7]+$/i,b=parseInt,y=typeof self=="object"&&self&&self.Object===Object&&self,d=typeof global=="object"&&global&&global.Object===Object&&global||y||Function("return this")(),m=(y=typeof exports=="object"&&exports&&!exports.nodeType&&exports)&&typeof module=="object"&&module&&!module.nodeType&&module,g=Object.prototype,j=g.hasOwnProperty,v=g.toString,x=(g=d.Symbol)?g.toStringTag:f,O=Math.max,h=Math.min;
 e.debounce=n,e.throttle=function(t,e,r){var i=true,u=true;if(typeof t!="function")throw new TypeError("Expected a function");return o(r)&&(i="leading"in r?!!r.leading:i,u="trailing"in r?!!r.trailing:u),n(t,e,{leading:i,maxWait:e,trailing:u})},e.isObject=o,e.isObjectLike=r,e.isSymbol=i,e.now=t,e.toNumber=u,e.VERSION="4.17.1",typeof define=="function"&&typeof define.amd=="object"&&define.amd?(d._=e, define(function(){return e})):m?((m.exports=e)._=e,y._=e):d._=e}).call(this);
 
-var body = document.getElementsByTagName('body')[0],
-    container = body.querySelectorAll('.container')[0],
+var container = document.querySelectorAll('.container')[0],
+    page = container.querySelector('.page'),
     navBtn = container.querySelectorAll('.nav-btn')[0],
     navItems = container.querySelectorAll('.mainnav__item'),
     footerNavItems = container.querySelectorAll('.footer-nav__item'),
-    projectBtn = document.querySelector('.project-btn'),
-    activeItem = "";
+    projectBtn = document.querySelector('.project-btn');
 
+function navState(isActive, elem, value) {
+    if (isActive && elem === page) {
+        container.classList = 'container';
+    } else if (isActive && elem === navBtn) {
+        container.classList = 'container';
 
-function toggleMenu() {
-    container.classList.toggle('menu-active');
-    if(container.classList.contains('project') || container.classList.contains('contact')){
-      container.classList = 'container';
+    } else if (!isActive && elem === navBtn) {
+        container.classList.add('menu-active');
+
+    } else if (value !== null && value === "vision-active") {
+        var url = elem.getElementsByTagName('A')[0].getAttribute('href');
+        window.location.href = url;
+    } else if (value !== null) {
+        container.classList = 'container menu-active ' + value;
     }
+
 }
 
-function _menuActions(event) {
+function _navEventHandler(event) {
     event.preventDefault();
+    event.stopPropagation();
     var elem = event.currentTarget,
-        elemAtt = elem.getAttribute("data-navBtn");
-    if (activeItem !== "") {
-        container.classList.remove(activeItem);
-    }
-    if (elemAtt !== null) {
-        event.preventDefault();
-        container.classList.add(elemAtt);
-
-    }else {
-      var url = event.currentTarget.getElementsByTagName('A')[0];
-      url = url.getAttribute('href');
-      window.location.href = url;
-
-    }
-    activeItem = elemAtt;
+        elemAtt = elem.getAttribute("data-activeItem"),
+        isActif = container.classList.contains('menu-active');
+    navState(isActif, elem, elemAtt);
 }
+
+
 
 window.addEventListener("load", function() {
-    navBtn.addEventListener('click', toggleMenu);
-    if(projectBtn !== null) {
-      projectBtn.addEventListener('click', _menuActions);
+    var i = 0;
+    navBtn.addEventListener('click', _navEventHandler);
+    page.addEventListener('click', _navEventHandler);
+    if (projectBtn !== null) {
+        projectBtn.addEventListener('click', _navEventHandler);
     }
-    for (var i = navItems.length; i--;) {
-        navItems[i].addEventListener('click', _menuActions);
+    for (i = navItems.length; i--;) {
+        navItems[i].addEventListener('click', _navEventHandler);
     }
-    for (var i = footerNavItems.length; i--;) {
-        footerNavItems[i].addEventListener('click', _menuActions);
+    for (i = footerNavItems.length; i--;) {
+        footerNavItems[i].addEventListener('click', _navEventHandler);
     }
 });
 
