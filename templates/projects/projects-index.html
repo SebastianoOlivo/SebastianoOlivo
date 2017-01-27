@@ -1,0 +1,13 @@
+
+<section class="project__index">
+    {% for property, value in transistor.model('projects') %} {% if loop.first %}
+    <ul class="project-list">
+        <li class="project-list__item last-project">{% endif %}
+            <a href="{{ value.getUrl() }}" style="background-image:url(/assets/images/projects/{{value.projectThumbnail}});">
+                <h2>{{loop.index}} {{ value.title }}</h2>
+            </a>
+            {% if loop.last == false %}</li><li class="project-list__item"> {% else %}
+        </li></ul>
+    {% endif %}
+    {% endfor %}
+</section> 

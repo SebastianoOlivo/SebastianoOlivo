@@ -5,10 +5,10 @@
 <!--[if gt IE 8]><!-->
 <html class="no-js" lang="en">
 <!--<![endif]-->
-
+{% set global = transistor.model('global') %}
 <head>
     <meta charset="utf-8" />
-    <title>{% if page.title %}{{ page.title }} - {% endif %}Digital Adventures</title>
+    <title>{{ global.title }}</title>
     <meta name="description" content="description">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans:400,700|Raleway:300" rel="stylesheet">
@@ -17,9 +17,10 @@
 
 <body>
     <div class="container" id="container">
-        {% include nav.html %}
+        {% include "../_includes/nav.html" %}
         <div class="page">
-            {{ content }}
+            {% block content %}
+            {% endblock %}
         </div>
     </div>
     <script type="text/javascript" async="" src="/assets/js/main-min.js">

@@ -1,11 +1,9 @@
----
-layout: default
-title: "Digital Adventures"
-excerpt: "You are looking for something unique, a new app, website, game or digital experience ? Let’s start your future digital adventure with us."
-banner: true
----
 
-{% include header.html %}
+{% extends "./_layouts/default.html" %}
+
+{% block content %}
+
+{% include "./_includes/header.html" %}
 
 <div class="homepage-content">
     <section id="vision" class="section-block section-block--vision">
@@ -94,4 +92,6 @@ banner: true
         </div>
     </section>
 </div>
-{% include footer.html %}
+{% include "./_includes/footer.html" %}
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{
+  "name": "Adventur",
+  "version": "0.0.0",
+  "description": "Adventur digital studio's website",
+  "main": "index.html",
+  "author": "Adventur",
+  "repository": "https://github.com/SebastianoOlivo/SebastianoOlivo.github.io.git",
+  "license": "MIT",
+  "scripts": {
+    "build": "node transistor",
+    "serve": "http-server ./site -a localhost -p 4040 -o"
+  },
+  "devDependencies": {
+    "http-server": "^0.9.0",
+    "transistor": "^0.2.1"
+  }
+}
