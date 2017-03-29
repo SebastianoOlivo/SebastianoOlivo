@@ -1,0 +1,30 @@
+{ 
+     "1sleepzz": {
+         "title": "Sleepzz",
+         "link": "http://sleepzz.be/",
+         "image": "assets/img/sleepzz.jpg",
+         "class": "sleepzz",
+         "id": 0
+     }, 
+     "2multivision": {
+         "title": "Multivision",
+         "link": "http://www.multivisionscreens.com/",
+         "image": "assets/img/multivision.jpg",
+         "class": "multivision",
+         "id": 1
+     }, 
+     "3ecoline": {
+         "title": "Ecoline",
+         "link": "http://ecolinerosieres.be/",
+         "image": "assets/img/ecoline.jpg",
+         "class": "ecoline",
+         "id": 2
+     }, 
+     "4mixerpop": {
+         "title": "Mixerpop",
+         "link": "https://vimeo.com/191610514",
+         "image": "assets/img/mixerpop.jpg",
+         "class": "mixerpop",
+         "id": 3
+     } 
+}
